@@ -25,7 +25,8 @@ const reset = () => {
 
 const shapingTime = (time) => {
 	const now = time
-	const hoge = now % 100 < 10 ? "0" + (now % 100) : "" + (now % 100)
+	let hoge = now % 100 < 10 ? "0" + (now % 100) : "" + (now % 100)
+	hoge = hoge.toString().substring(0, 2)
 	const sec = (now / 100 % 60 | 0) < 10 ? "0" + (now / 100 % 60 | 0) : "" + (now / 100 % 60 | 0)
 	const min = (now / 6000 % 60 | 0) < 10 ? "0" + (now / 6000 % 60 | 0) : "" + (now / 6000 % 60 | 0)
 	const hour = now / 360000 | 0
